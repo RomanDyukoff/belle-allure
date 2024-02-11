@@ -9,16 +9,42 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.9",
+    "@types/nodemailer": "^6.4.14",
+    "classnames": "^2.3.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "import": "^0.0.6",
+    "next": "14.1.0",
+    "next-sitemap": "^4.2.3",
+    "nodemailer": "^6.9.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "sass": "^1.62.1",
+    "standard": "^17.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.4",
+    "typescript": "^5"
   }
 }

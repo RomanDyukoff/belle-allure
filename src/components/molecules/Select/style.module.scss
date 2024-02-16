@@ -1,0 +1,54 @@
+.select {
+    border: 4px solid #086ad2;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 10px;
+
+    &-title {
+        font-weight: bold;
+        font-size: 22px;
+        color: black;
+    }
+
+    &-options {
+        position: absolute;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        right: 0;
+        top: 70px;
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        z-index: 2;
+        background: #fff;
+        width: 100%;
+        cursor: pointer;
+
+        .isActive {
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &-option {
+        color: black;
+        width: 100%;
+        padding: 10px;
+        font-size: 19px;
+        &:hover {
+            background-color: #086ad2;
+            color: #fff;
+        }
+    }
+    .isActiveOption {
+        display: flex;
+    }
+
+    @media (max-width: 567px) {
+        &-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+}

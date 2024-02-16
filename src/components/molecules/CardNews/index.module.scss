@@ -1,0 +1,21 @@
+.card-news {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #454545;
+  border-radius: 150px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+  }
+  button.card-news__footer{
+    display: flex;
+    justify-content: flex-end;
+  }
+}

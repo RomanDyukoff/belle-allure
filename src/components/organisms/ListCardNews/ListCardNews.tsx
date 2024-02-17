@@ -16,7 +16,7 @@ const ListCardNews = memo(({ listCardNews }: { listCardNews: CardNewsType[] }) =
     return (
         <div className={cx("card__items")} style={{ width: width && width < 1050 ? width : 1050 }}>
             {listCardNews.map((news, i) => (
-                <CardNews newsProps={news} key={i} cur={0 + 1} />
+                <CardNews newsProps={news} key={i} cur={i + 1} />
             ))}
         </div>
     );

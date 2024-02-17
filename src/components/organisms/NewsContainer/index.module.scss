@@ -1,6 +1,31 @@
-.news__list{
+.news__page {
+  padding-top: 90px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 700px;
+
+  &-title {
+    text-align: center;
+    text-shadow:
+            1px 1px 1px #828080,
+            -1px 1px 1px #828080;
+    color: #ffc3cc;
+    transition: all .5s;
+    font-size: 84px;
+    line-height: 31px;
+    font-family: "Allegretto Script One", sans-serif;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 700px;
+  }
+  &-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+    width: 100%;
+  }
 }
+

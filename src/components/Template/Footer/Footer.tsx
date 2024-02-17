@@ -7,7 +7,7 @@ const cx = cnBind.bind(styles);
 export const Footer = () => {
     return (
         <footer className={cx("footer", "footer-bg")}>
-            <div className={cx("footer-container", "container")}></div>
+            <div className={cx("footer-container", "container")} />
         </footer>
     );
 };

@@ -1,6 +1,6 @@
 import cnBind from "classnames/bind";
 
-import styles from "@/components/template/Footer/Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 const cx = cnBind.bind(styles);
 

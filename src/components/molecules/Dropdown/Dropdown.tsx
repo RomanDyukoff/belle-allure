@@ -16,7 +16,7 @@ export const Dropdown = ({ title, ROUTES_CHILDREN }: IDropdown) => {
             </span>
             <div className={cx("dropdown")}>
                 {ROUTES_CHILDREN.map((elem, i) => (
-                    <Link key={i} href={elem.href} className={cx("option", "underline")} onClick={() => { }}>
+                    <Link key={i} href={elem.href} className={cx("option", "underline")} onClick={() => {}}>
                         {elem.title}
                     </Link>
                 ))}

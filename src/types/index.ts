@@ -27,5 +27,5 @@ export interface IDESCPAGE {
     p2: string;
     p3?: string;
     p4?: string;
-    listTitle?: string[]
+    listTitle?: string[];
 }

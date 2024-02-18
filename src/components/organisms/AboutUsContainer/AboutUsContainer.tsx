@@ -2,7 +2,6 @@
 
 import type { SyntheticEvent } from "react";
 import { memo, useState } from "react";
-import { Box, Typography } from "@mui/material";
 import cnBind from "classnames/bind";
 
 import { AdaptiveContainer } from "@/components/atoms/AdaptiveContainer/AdaptivContainer";
@@ -22,54 +21,48 @@ const AboutUsContainer = memo(() => {
 
     return (
         <div className={cx("aboutUs")}>
-            <AdaptiveContainer>
+            <AdaptiveContainer classNames={cx("aboutUs__container")}>
                 <Title levet="h2" classNames={cx("aboutUs__title")}>
-                    О нас
+                    Знакомства с нами
                 </Title>
-
-                <CustomTabs value={value} handleChange={handleChange} titles={listTitle} />
-
-                <div
-                    role="tabpanel"
-                    hidden={value !== 0}
-                    id={`simple-tabpanel-${0}`}
-                    aria-labelledby={`simple-tab-${0}`}
-                >
-                    {value === 0 && (
-                        <Box sx={{ p: 3 }}>
-                            <h1>История Belle Allure</h1>
-                            <div>
-                                <p>
-                                    История MONÉ началась 16 сентября 1998 года, когда Александр Глушков открыл первый
-                                    салон MONÉ в Москве на Новинском бульваре. Первыми клиентами были женщины, любящие
-                                    искусство, а особенно импрессионистов.
-                                </p>
+                <div className={cx("aboutUs__tabs")}>
+                    <CustomTabs value={value} handleChange={handleChange} titles={listTitle} />
+                    <div
+                        role="tabpanel"
+                        hidden={value !== 0}
+                        id={`simple-tabpanel-${0}`}
+                        aria-labelledby={`simple-tab-${0}`}
+                        className={cx("aboutUs__content")}
+                    >
+                        {value === 0 && (
+                            <div className={cx("aboutUs__history")}>
+                                <Title classNames={cx("aboutUs__history-caption")} levet="h3">
+                                    История Belle Allure
+                                </Title>
+                                <div className={cx("aboutUs__history-desc")}>
+                                    <p>
+                                        История Belle Allure началась 16 сентября 1998 года, когда Александр Глушков
+                                        открыл первый салон Belle Allure в Москве на Новинском бульваре. Первыми
+                                        клиентами были женщины, любящие искусство, а особенно импрессионистов.
+                                    </p>
+                                </div>
+                                <div className={cx("aboutUs__history-more")}>
+                                    <p>
+                                        Я назвал салон именем Belle Allure, потому что безумно люблю импрессионистов,
+                                        цвет и творчество. Belle Allure для меня — самый близкий по духу и стилю
+                                        художник.
+                                    </p>
+                                    <p>
+                                        Я хочу сделать профессию парикмахера самой престижной и желанной в нашей стране.
+                                    </p>
+                                    <p>
+                                        Мне нравится, когда женщина в сложный будний день, полный встреч и желания всюду
+                                        успеть, не забывает надеть каблуки и сделать укладку.
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <p>
-                                    Я назвал салон именем Моне, потому что безумно люблю импрессионистов, цвет и
-                                    творчество. Моне для меня — самый близкий по духу и стилю художник.
-                                </p>
-                                <p>Я хочу сделать профессию парикмахера самой престижной и желанной в нашей стране.</p>
-                                <p>
-                                    Мне нравится, когда женщина в сложный будний день, полный встреч и желания всюду
-                                    успеть, не забывает надеть каблуки и сделать укладку.
-                                </p>
-                            </div>
-                        </Box>
-                    )}
-                </div>
-                <div
-                    role="tabpanel"
-                    hidden={value !== 1}
-                    id={`simple-tabpanel-${1}`}
-                    aria-labelledby={`simple-tab-${1}`}
-                >
-                    {value === 1 && (
-                        <Box sx={{ p: 3 }}>
-                            <Typography>asdasdasd</Typography>
-                        </Box>
-                    )}
+                        )}
+                    </div>
                 </div>
             </AdaptiveContainer>
         </div>

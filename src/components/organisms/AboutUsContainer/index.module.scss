@@ -1,22 +1,58 @@
 .aboutUs {
-  padding-top: 180px;
-  background: #f2e9e5;
+  display: flex;
+  height: 800px;
+  background-image: url("../../../assets/images/Layer-135316.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__title {
     text-align: center;
-    text-shadow:
-            1px 1px 1px #828080,
-            -1px 1px 1px #828080;
-    color: #ffc3cc;
+    color: #ffffff;
     transition: all .5s;
     font-size: 84px;
     line-height: 31px;
     font-family: "Allegretto Script One", sans-serif;
+    padding-bottom: 90px;
+  }
+
+  &__tabs{
+    max-width: 700px;
+    width: 100%;
   }
 
   &__nav {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  &__content {
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 20px 10px;
+  }
+
+  &__history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #7b7b7b;
+
+    &-caption {
+      font: 2rem "Allegretto Script One";
+      letter-spacing: -1px;
+      color: #454545;
+
+    }
   }
 }

@@ -4,7 +4,6 @@ import { memo, useState } from "react";
 import cnBind from "classnames/bind";
 
 import { AdaptiveContainer } from "@/components/atoms/AdaptiveContainer/AdaptivContainer";
-import { Title } from "@/components/atoms/TItle/Title";
 import type { CardNewsType } from "@/components/molecules/CardNews/index.type";
 import { ListCardNews } from "@/components/organisms/ListCardNews/ListCardNews";
 
@@ -21,8 +20,8 @@ const NewsContainer = memo(() => {
     ];
     const [cur, setCur] = useState<number>(0);
     const handleIsNext = () => {
-        if (cur === arr.length - 4) {
-            setCur(arr.length - 4);
+        if (cur === arr.length - 3) {
+            setCur(arr.length - 3);
         } else {
             setCur((prevState) => prevState + 1);
         }
@@ -38,14 +37,13 @@ const NewsContainer = memo(() => {
     return (
         <div className={cx("news__page")}>
             <AdaptiveContainer>
-                <Title classNames={cx("news__page-title")} levet="h2">
-                    Новости
-                </Title>
                 <div className={cx("news__page-list")}>
                     <div onClick={() => handleIsPrev()} className={cx("news__page-btn")}>
                         -
                     </div>
-                    <ListCardNews listCardNews={cur === 0 ? [...arr].slice(0, 4) : arr.filter((_, i) => i >= cur)} />
+                    <ListCardNews
+                        listCardNews={cur === 0 ? [...arr].slice(0, 3) : arr.filter((_, i) => i >= cur).slice(0, 3)}
+                    />
                     <div onClick={() => handleIsNext()} className={cx("news__page-btn")}>
                         +
                     </div>

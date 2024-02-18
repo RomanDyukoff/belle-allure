@@ -1,13 +1,9 @@
 .news__page {
-  padding-top: 90px;
   display: flex;
 
   &-title {
     text-align: center;
-    text-shadow:
-            1px 1px 1px #828080,
-            -1px 1px 1px #828080;
-    color: #ffc3cc;
+    color: #f7c9cb;
     transition: all .5s;
     font-size: 84px;
     line-height: 31px;
@@ -18,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 700px;
+    height: 800px;
   }
   &-btn{
     display: flex;

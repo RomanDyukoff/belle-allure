@@ -2,6 +2,7 @@ import cnBind from "classnames/bind";
 
 import { AboutUsContainer } from "@/components/organisms/AboutUsContainer/AboutUsContainer";
 import { AcademyContainer } from "@/components/organisms/AcademyContainer/AcademyContainer";
+import { MastersContainer } from "@/components/organisms/MastersContainer/MastersContainer";
 import { NewsContainer } from "@/components/organisms/NewsContainer/NewsContainer";
 import { PriceInfoContainer } from "@/components/organisms/PriceInfoContainer/PriceInfoContainer";
 
@@ -17,6 +18,7 @@ export default function Home() {
             <NewsContainer />
             <AboutUsContainer />
             <AcademyContainer />
+            <MastersContainer />
             <PriceInfoContainer />
         </>
     );

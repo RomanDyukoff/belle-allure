@@ -1,0 +1,17 @@
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__items {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+  }
+}

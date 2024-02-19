@@ -1,4 +1,4 @@
-import type { IROUTES } from "@/types";
+import type { IROUTES, IROUTESFOOTER } from "@/types";
 
 interface IROUTES_CHILDREN extends IROUTES {
     point: number;
@@ -40,4 +40,12 @@ export const ROUTES_CHILDREN: IROUTES_CHILDREN[] = [
         point: 1,
     },
     { title: "Уплотнения SKF", href: "/uplotneniya-skf", label: "uplotneniyaSkf", point: 2 },
+];
+
+export const ROUTESFOOTER: IROUTESFOOTER[] = [
+    { title: "О нас", href: "" },
+    { title: "Услуги", href: "" },
+    { title: "Блог", href: "#" },
+    { title: "on Board", href: "#" },
+    { title: "Контакты", href: "/#contacts" },
 ];

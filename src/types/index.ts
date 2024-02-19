@@ -29,3 +29,8 @@ export interface IDESCPAGE {
     p4?: string;
     listTitle?: string[];
 }
+
+export interface IROUTESFOOTER {
+    title: string;
+    href: string;
+}

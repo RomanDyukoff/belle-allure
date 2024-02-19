@@ -2,6 +2,7 @@ import cnBind from "classnames/bind";
 
 import { AboutUsContainer } from "@/components/organisms/AboutUsContainer/AboutUsContainer";
 import { NewsContainer } from "@/components/organisms/NewsContainer/NewsContainer";
+import { PriceInfoContainer } from "@/components/organisms/PriceInfoContainer/PriceInfoContainer";
 
 import styles from "./page.module.scss";
 
@@ -14,6 +15,7 @@ export default function Home() {
             </div>
             <NewsContainer />
             <AboutUsContainer />
+            <PriceInfoContainer />
         </>
     );
 }

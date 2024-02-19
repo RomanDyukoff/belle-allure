@@ -1,0 +1,27 @@
+.academy {
+  display: flex;
+  width: 100%;
+  padding: 90px 0;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__caption {
+    font: 84px "Allegretto Script One";
+    line-height: 84px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+  }
+
+  &__desc{
+    max-width: 550px;
+    width: 100%;
+  }
+}

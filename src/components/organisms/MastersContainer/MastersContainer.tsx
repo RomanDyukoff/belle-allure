@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
 import galya from "@/assets/images/galya.png";
@@ -12,18 +11,9 @@ import zina from "@/assets/images/zina.png";
 import { AdaptiveContainer } from "@/components/atoms/AdaptiveContainer/AdaptivContainer";
 import { Title } from "@/components/atoms/TItle/Title";
 import { useCn } from "@/hooks/useCn";
+import type { ImagesDataType, MastersDataType } from "@/types";
 
 import styles from "./index.module.scss";
-
-interface MastersDataType {
-	name: string;
-	id: string;
-}
-
-interface ImagesDataType {
-	src: StaticImageData;
-	id: string;
-}
 
 const dataImage: ImagesDataType[] = [
 	{ src: galya, id: "1" },
@@ -53,6 +43,20 @@ export const MastersContainer = () => {
 		setIsHovering(false);
 	};
 
+	const createItems = ({ id, name }: MastersDataType) => {
+		return (
+			<li
+				key={id}
+				className={cx("masters__item")}
+				onMouseEnter={() => handleMouseEnter(id)}
+				onMouseLeave={handleMouseLeave}
+			>
+				<span>{name}</span>
+				<ArrowForwardIcon className={cx("arrow")} />
+			</li>
+		)
+	}
+
 	useEffect(() => {
 		let interval: NodeJS.Timeout;
 
@@ -72,24 +76,15 @@ export const MastersContainer = () => {
 					Наши мастера
 				</Title>
 				<div className={cx("masters__wrapper")}>
+
 					<ul className={cx("masters__list")}>
 						{dataMasters.map(({ name, id }) => (
-							<li
-								key={id}
-								className={cx("masters__item")}
-								onMouseEnter={() => handleMouseEnter(id)}
-								onMouseLeave={handleMouseLeave}
-							>
-								<span>{name}</span>
-								<ArrowForwardIcon className={cx("arrow")} />
-							</li>
+							createItems({ id, name })
 						))}
 					</ul>
 
-					<div className={cx("masters__images")}>
-						<div className={cx("masters__image")}>
-							<Image src={dataImage[imageIndex].src} alt="photo" />
-						</div>
+					<div className={cx("masters__image")}>
+						<Image src={dataImage[imageIndex].src} alt="photo" />
 					</div>
 				</div>
 			</AdaptiveContainer>

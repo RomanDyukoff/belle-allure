@@ -14,8 +14,68 @@
     align-items: center;
     height: 700px;
   }
-  button.card-news__footer{
+
+  button.card-news__footer {
     display: flex;
-    justify-content: flex-end;
+    width: 120px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    line-height: 35px;
+    border-radius: 3%;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.35s;
+    box-sizing: border-box;
+    $btn-color: transparent;
+    $btn-hover-color: #dd6395;
+    position: relative;
+    border-color: $btn-color;
+    background-color: $btn-color;
+    color: #484848;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      background-color: $btn-hover-color;
+      transition: all 0.25s;
+      content: "";
+      z-index: 0;
+    }
+
+    &::before {
+      top: 0;
+      transform: translate(-100%, 0);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translate(100%, 0);
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::before,
+      &::after {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
+
+.card-bg {
+  transition: .5s;
+  background-image: url("../../../assets/images/FPm.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+

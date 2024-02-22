@@ -1,14 +1,17 @@
 .price {
 
-  padding-top: 90px;
   display: flex;
   background: #f7f7f7;
+
+  &__caption {
+    font: 84px "Allegretto Script One";
+    line-height: 84px;
+  }
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    align-items: center;
     padding: 90px 0;
   }
 

@@ -1,13 +1,10 @@
 .news__page {
   display: flex;
+  padding: 90px 0;
 
   &-title {
-    text-align: center;
-    color: #f7c9cb;
-    transition: all .5s;
-    font-size: 84px;
-    line-height: 31px;
-    font-family: "Allegretto Script One", sans-serif;
+    font: 84px "Allegretto Script One";
+    line-height: 84px;
   }
 
   &-list {

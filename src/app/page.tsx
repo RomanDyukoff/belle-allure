@@ -18,8 +18,8 @@ export default function Home() {
             <NewsContainer />
             <AboutUsContainer />
             <AcademyContainer />
-            <MastersContainer />
             <PriceInfoContainer />
+            <MastersContainer />
         </>
     );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import cnBind from "classnames/bind";
 
 import type { IButtonType } from "@/components/atoms/Button/Button.type";

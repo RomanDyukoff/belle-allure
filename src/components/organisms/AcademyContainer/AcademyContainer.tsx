@@ -1,8 +1,10 @@
+"use client";
+
 import { memo } from "react";
-import { Button } from "@mui/material";
 import cnBind from "classnames/bind";
 
 import { AdaptiveContainer } from "@/components/atoms/AdaptiveContainer/AdaptivContainer";
+import { Button } from "@/components/atoms/Button/Button";
 import { Title } from "@/components/atoms/TItle/Title";
 
 import styles from "./index.module.scss";
@@ -19,7 +21,9 @@ const AcademyContainer = memo(() => {
                     <span className={cx("academy__desc")}>
                         Каждый мастер, независимо от своего опыта, проходит обучение по многоступенчатой системе
                     </span>
-                    <Button className={cx("academy__btn")}>Подробнее</Button>
+                    <Button handleAction={() => {}} classNames={cx("academy__btn")}>
+                        Подробнее
+                    </Button>
                 </div>
             </AdaptiveContainer>
         </div>

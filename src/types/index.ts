@@ -34,3 +34,13 @@ export interface IROUTESFOOTER {
     title: string;
     href: string;
 }
+
+export interface MastersDataType {
+    name: string;
+    id: string;
+}
+
+export interface ImagesDataType {
+    src: StaticImageData;
+    id: string;
+}

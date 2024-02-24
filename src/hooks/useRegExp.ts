@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const useRegExp = (value: string): boolean => {
     const [error, setError] = useState<boolean>(false);

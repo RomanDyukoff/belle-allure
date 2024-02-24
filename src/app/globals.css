@@ -1,18 +1,18 @@
 @font-face {
-    font-family: "Allegretto Script One";
-    src: url('../assets/fonts/allegrettoscriptone.ttf') format('truetype')
+    font-family: 'Allegretto Script One';
+    src: url('../assets/fonts/allegrettoscriptone.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Merriweather Regular";
-    src: url('../assets/fonts/MerriWeatherLight/Merriweather-Regular.ttf') format('truetype')
+    font-family: 'Merriweather Regular';
+    src: url('../assets/fonts/MerriWeatherLight/Merriweather-Regular.ttf') format('truetype');
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Merriweather Regular", sans-serif;
+    font-family: 'Merriweather Regular', sans-serif;
 }
 
 .wrapper {

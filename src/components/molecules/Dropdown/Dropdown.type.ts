@@ -1,4 +1,4 @@
-import type { IROUTES } from "@/types";
+import type { IROUTES } from '@/types';
 
 export interface IDropdown {
     title: string;

@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
-import { useBooleanState } from "./useBooleanState";
+import { useBooleanState } from './useBooleanState';
 
 export const useModalWindow = () => {
     const { value, setFalse, toggleValue } = useBooleanState(false);
@@ -12,10 +12,10 @@ export const useModalWindow = () => {
     };
     const handleToggleModalWindow = () => toggleValue();
     useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     });
 

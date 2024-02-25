@@ -18,17 +18,21 @@ export const PrevievSection = () => {
 
         if (!current) return;
 
-        const observers = Array.from(current.children).map((el, i) => {
+        const observers = Array.from(current.children).map((child, i) => {
             const observer = new IntersectionObserver(
                 ([{ isIntersecting, target }]) => {
                     setTimeout(() => {
                         target.classList.toggle(cx('isVivsible'), isIntersecting);
                     }, i * 500);
+
+                    if (isIntersecting) {
+                        observer.unobserve(child);
+                    }
                 },
                 { threshold: 0.1 },
             );
 
-            observer.observe(el);
+            observer.observe(child);
 
             return observer;
         });

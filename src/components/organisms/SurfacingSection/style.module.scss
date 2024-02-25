@@ -10,7 +10,7 @@
         transform: translateY(100px);
         transition: opacity 0.8s, transform 0.8s;
 
-        &.isVivsible {
+        &.isVisible {
             opacity: 1;
             transform: translateY(0);
         }

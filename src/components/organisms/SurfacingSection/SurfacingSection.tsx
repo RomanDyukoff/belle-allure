@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { SurfacingCard } from '@/components/atoms/SurfacingCard/SurfacingCard';
 import type { SurfacingCardType } from '@/components/atoms/SurfacingCard/SurfacingCard.type';
@@ -42,25 +42,37 @@ const dataItems: SurfacingCardType[] = [
 ];
 
 export const SurfacingSection = () => {
-    const ref = useRef<null | HTMLElement>(null);
+    const parentRef = useRef<HTMLElement | null>(null);
+    const [isVisible, setIsVisible] = useState<boolean[]>([]);
+
     const cx = useCn(styles);
 
     useEffect(() => {
-        const { current } = ref;
+        if (!parentRef.current) return;
 
-        if (!current) return;
+        const children = Array.from(parentRef.current.children);
+        setIsVisible(new Array(children.length).fill(false));
 
-        const observers = Array.from(current.children).map((el, i) => {
+        const observers = children.map((child, i) => {
             const observer = new IntersectionObserver(
-                ([{ isIntersecting, target }]) => {
+                ([{ isIntersecting }]) => {
                     setTimeout(() => {
-                        target.classList.toggle(cx('isVivsible'), isIntersecting);
-                    }, i * 500);
+                        setIsVisible((prevIsVisible) => {
+                            const newIsVisible = [...prevIsVisible];
+                            newIsVisible[i] = isIntersecting;
+
+                            return newIsVisible;
+                        });
+                    }, i * 300);
+
+                    if (isIntersecting) {
+                        observer.unobserve(child);
+                    }
                 },
                 { threshold: 0.1 },
             );
 
-            observer.observe(el);
+            observer.observe(child);
 
             return observer;
         });
@@ -70,16 +82,14 @@ export const SurfacingSection = () => {
                 observer.disconnect();
             });
         };
-    }, [ref, cx]);
+    }, []);
 
     return (
-        <section ref={ref} className={cx('surfacing')}>
-            {dataItems.map((items, i) => {
-                const { title, linkName, path, pathBg } = items;
-
+        <section ref={parentRef} className={cx('surfacing')}>
+            {dataItems.map(({ title, linkName, path, pathBg }, i) => {
                 return (
                     <SurfacingCard
-                        className={cx('surfacing__card')}
+                        className={cx('surfacing__card', isVisible[i] ? 'isVisible' : '')}
                         key={i}
                         point={`0${i + 1}`}
                         title={title}

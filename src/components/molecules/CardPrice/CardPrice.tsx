@@ -18,7 +18,7 @@ const CardPrice = memo(({ src, desc, title }: { src: StaticImageData; desc: stri
                 </div>
             </Link>
             <div className={cx('cardPrice__desc')}>
-                <Title levet='h3'>{title}</Title>
+                <Title level='h3'>{title}</Title>
                 <p>{desc}</p>
             </div>
         </div>

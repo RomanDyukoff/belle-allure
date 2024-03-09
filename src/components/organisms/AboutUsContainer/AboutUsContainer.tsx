@@ -28,7 +28,7 @@ const AboutUsContainer = memo(() => {
         <div className={cx('aboutUs')}>
             <AdaptiveContainer classNames={cx('aboutUs__container')}>
                 <div className={cx('aboutUs__tabs')}>
-                    <Title levet='h2' classNames={cx('aboutUs__title')}>
+                    <Title level='h2' classNames={cx('aboutUs__title')}>
                         Осознательная красота.
                     </Title>
                     <CustomTabs value={value} handleChange={handleChange} titles={listTitle} />
@@ -43,7 +43,7 @@ const AboutUsContainer = memo(() => {
                     {value === 1 && (
                         <div className={cx('aboutUs__philosophy')}>
                             <div className={cx('aboutUs__philosophy-principleOne')}>
-                                <Title classNames={cx('aboutUs__philosophy-caption')} levet='h3'>
+                                <Title classNames={cx('aboutUs__philosophy-caption')} level='h3'>
                                     Меньше значит больше.
                                 </Title>
                                 <div className={cx('aboutUs__philosophy-img')}>
@@ -58,7 +58,7 @@ const AboutUsContainer = memo(() => {
                             </div>
                             <div className={cx('aboutUs__philosophy-more')}>
                                 <div className={cx('aboutUs__philosophy-principleTwo')}>
-                                    <Title classNames={cx('aboutUs__philosophy-caption')} levet='h3'>
+                                    <Title classNames={cx('aboutUs__philosophy-caption')} level='h3'>
                                         Практический подход.
                                     </Title>
                                     <div className={cx('aboutUs__philosophy-img')}>
@@ -74,7 +74,7 @@ const AboutUsContainer = memo(() => {
                                     </p>
                                 </div>
                                 <div className={cx('aboutUs__philosophy-principleThree')}>
-                                    <Title classNames={cx('aboutUs__philosophy-caption')} levet='h3'>
+                                    <Title classNames={cx('aboutUs__philosophy-caption')} level='h3'>
                                         Лучший способ.
                                     </Title>
                                     <div className={cx('aboutUs__philosophy-img')}>
@@ -134,7 +134,7 @@ const AboutUsContainer = memo(() => {
                                 <div className={cx('aboutUs__history-bottom')}>
                                     <div className={cx('aboutUs__history-items')}>
                                         <div className={cx('aboutUs__history-caption')}>
-                                            <Title levet='h1'>
+                                            <Title level='h1'>
                                                 <span>Я люблю красивых</span> женщин с умными глазами
                                             </Title>
                                         </div>

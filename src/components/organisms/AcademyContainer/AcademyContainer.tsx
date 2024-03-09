@@ -15,7 +15,7 @@ const AcademyContainer = memo(() => {
     return (
         <div className={cx('academy')}>
             <AdaptiveContainer classNames={cx('academy__container')}>
-                <Title classNames={cx('academy__caption')} levet='h2'>
+                <Title classNames={cx('academy__caption')} level='h2'>
                     Академия
                 </Title>
                 <div className={cx('academy__items')}>

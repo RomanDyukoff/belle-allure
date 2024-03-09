@@ -20,7 +20,7 @@ const FooterMiddle = memo(() => {
                 </div>
             </div>
             <div>
-                <Title levet='h2'>ТУТ БУДЕТ КАКОЙ-ТО СЛОГАН САЛОНА</Title>
+                <Title level='h2'>ТУТ БУДЕТ КАКОЙ-ТО СЛОГАН САЛОНА</Title>
                 <span>ТУТ БУДЕТ КАКОЙ-ТО СЛОГАН САЛОНА ИЛИ ЕЩЕ КАКОЙ-ТО ТЕКС</span>
             </div>
             <div className={cx('footerMiddle__imgs')}>

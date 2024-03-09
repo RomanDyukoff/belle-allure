@@ -6,8 +6,8 @@ import styles from './style.module.scss';
 
 const cx = cnBind.bind(styles);
 
-export const Title = ({ levet = 'h1', classNames, children }: TitleProps): JSX.Element => {
-    const Tag = levet;
+export const Title = ({ level = 'h1', classNames, children }: TitleProps): JSX.Element => {
+    const Tag = level;
 
     return <Tag className={cx(classNames, 'title')}>{children}</Tag>;
 };

@@ -48,10 +48,13 @@ export const SurfacingSection = () => {
     const cx = useCn(styles);
 
     useEffect(() => {
-        if (!parentRef.current) return;
+        const { current } = parentRef;
 
-        const children = Array.from(parentRef.current.children);
-        setIsVisible(new Array(children.length).fill(false));
+        if (!current) return;
+
+        const children = Array.from(current.children);
+        setIsVisible(Array.from({ length: children.length }, () => false));
+
 
         const observers = children.map((child, i) => {
             const observer = new IntersectionObserver(
@@ -89,7 +92,7 @@ export const SurfacingSection = () => {
             {dataItems.map(({ title, linkName, path, pathBg }, i) => {
                 return (
                     <SurfacingCard
-                        className={cx('surfacing__card', isVisible[i] ? 'isVisible' : '')}
+                        className={cx('surfacing__card', isVisible[i] && 'isVisible')}
                         key={i}
                         point={`0${i + 1}`}
                         title={title}

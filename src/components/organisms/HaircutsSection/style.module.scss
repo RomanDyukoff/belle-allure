@@ -1,4 +1,4 @@
-.colorist {
+.haircut {
     height: 100vh;
     background-image: url('../../../assets/images/bb.jpg');
     background-position: center center;
@@ -15,25 +15,10 @@
         height: 100%;
     }
 
-    &__title {
-        font-size: 2rem;
-        line-height: 130%;
-        font-weight: normal;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
     &__cards {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
         gap: 30px;
-        align-items: center;
-        transform: translate(-100%);
-        opacity: 0;
-        transition: transform 1s ease-in-out;
-
-        &.isActive {
-            transform: translate(0);
-            opacity: 1;
-        }
     }
 }

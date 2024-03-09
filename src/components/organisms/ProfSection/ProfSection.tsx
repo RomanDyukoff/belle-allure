@@ -1,5 +1,6 @@
 'use client';
 
+import { AdaptiveContainer } from '@/components/atoms/AdaptiveContainer/AdaptivContainer';
 import { ProfItem } from '@/components/atoms/ProfItem/ProfItem';
 import { Title } from '@/components/atoms/TItle/Title';
 import { useCn } from '@/hooks/useCn';
@@ -7,7 +8,6 @@ import { useCn } from '@/hooks/useCn';
 import type { DataCardsType } from './ProfSection.type';
 
 import styles from './style.module.scss';
-import { AdaptiveContainer } from '@/components/atoms/AdaptiveContainer/AdaptivContainer';
 
 const dataCards: DataCardsType[] = [
     {
@@ -53,7 +53,6 @@ export const ProfSection = () => {
     return (
         <section className={cx('prof')}>
             <AdaptiveContainer>
-
                 <div className={cx('prof__wrapper')}>
                     <Title classNames={cx('prof__title')} level='h2'>
                         Мы верим в то, что только благодаря страсти к профессии, упорному труду и дисциплине рождается
@@ -71,7 +70,6 @@ export const ProfSection = () => {
                         ))}
                     </div>
                 </div>
-
             </AdaptiveContainer>
         </section>
     );

@@ -55,7 +55,6 @@ export const SurfacingSection = () => {
         const children = Array.from(current.children);
         setIsVisible(Array.from({ length: children.length }, () => false));
 
-
         const observers = children.map((child, i) => {
             const observer = new IntersectionObserver(
                 ([{ isIntersecting }]) => {

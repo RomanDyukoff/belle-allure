@@ -40,7 +40,7 @@ const NewsContainer = memo(() => {
                     </div>
                     <ListCardNews
                         listCardNews={arr.slice(cur, cur + 3)}
-                    // listCardNews={cur === 0 ? [...arr].slice(0, 3) : arr.filter((_, i) => i >= cur).slice(0, 3)}
+                        // listCardNews={cur === 0 ? [...arr].slice(0, 3) : arr.filter((_, i) => i >= cur).slice(0, 3)}
                     />
                     <div onClick={() => handleIsNext()} className={cx('news__page-btn')}>
                         +

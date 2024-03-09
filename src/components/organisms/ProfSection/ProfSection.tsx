@@ -1,5 +1,6 @@
 'use client';
 
+import { AdaptiveContainer } from '@/components/atoms/AdaptiveContainer/AdaptivContainer';
 import { ProfItem } from '@/components/atoms/ProfItem/ProfItem';
 import { Title } from '@/components/atoms/TItle/Title';
 import { useCn } from '@/hooks/useCn';
@@ -51,9 +52,9 @@ export const ProfSection = () => {
 
     return (
         <section className={cx('prof')}>
-            <div className='container'>
+            <AdaptiveContainer>
                 <div className={cx('prof__wrapper')}>
-                    <Title classNames={cx('prof__title')} levet='h2'>
+                    <Title classNames={cx('prof__title')} level='h2'>
                         Мы верим в то, что только благодаря страсти к профессии, упорному труду и дисциплине рождается
                         талант парикмахера! Только так Вы способны реализоваться, как профессионал.
                     </Title>
@@ -69,7 +70,7 @@ export const ProfSection = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </AdaptiveContainer>
         </section>
     );
 };

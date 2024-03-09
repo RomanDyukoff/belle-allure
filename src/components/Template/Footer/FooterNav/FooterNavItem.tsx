@@ -11,7 +11,7 @@ const cx = cnBind.bind(styles);
 const FooterNavItem = memo(({ title, listHref }: { title: string; listHref: IROUTESFOOTER[] }) => {
     return (
         <div className={cx('footerTop__nav')}>
-            <Title classNames={cx('footerTop__title')} levet='h4'>
+            <Title classNames={cx('footerTop__title')} level='h4'>
                 {title}
             </Title>
             <Navigation listHref={listHref} />

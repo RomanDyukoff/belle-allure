@@ -66,7 +66,7 @@ const MastersContainer = memo(() => {
     return (
         <section className={cx('masters')}>
             <AdaptiveContainer>
-                <Title classNames={cx('masters__title')} levet='h2'>
+                <Title classNames={cx('masters__title')} level='h2'>
                     Познакомьтесь с нашими сотрудниками!
                 </Title>
                 <div className={cx('masters__wrapper')}>

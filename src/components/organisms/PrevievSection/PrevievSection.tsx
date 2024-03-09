@@ -49,10 +49,10 @@ export const PrevievSection = () => {
             <AdaptiveContainer>
                 <div className={cx('previev__wrapper')}>
                     <div ref={ref} className={cx('previev__content')}>
-                        <Title classNames={cx('previev__title')} levet='h1'>
+                        <Title classNames={cx('previev__title')} level='h1'>
                             Belle Allure
                         </Title>
-                        <Title classNames={cx('previev__subtitle')} levet='h2'>
+                        <Title classNames={cx('previev__subtitle')} level='h2'>
                             Академия Belle Allure
                         </Title>
                         <p className={cx('previev__text')}>

@@ -20,25 +20,18 @@ const NewsContainer = memo(() => {
         { title: 'Новость 5', caption: 'Тут краткое описание новости', slog: 'Ну и тут какой-то маленький текс' },
     ];
     const [cur, setCur] = useState<number>(0);
+
     const handleIsNext = () => {
-        if (cur === arr.length - 3) {
-            setCur(arr.length - 3);
-        } else {
-            setCur((prevState) => prevState + 1);
-        }
+        setCur((prevState) => (prevState === arr.length - 3 ? arr.length - 3 : prevState + 1));
     };
     const handleIsPrev = () => {
-        if (cur === 0) {
-            setCur(0);
-        } else {
-            setCur((prevState) => prevState - 1);
-        }
+        setCur((prevState) => (prevState === 0 ? 0 : prevState - 1));
     };
 
     return (
         <div className={cx('news__page')}>
             <AdaptiveContainer>
-                <Title classNames={cx('news__page-title')} levet='h2'>
+                <Title classNames={cx('news__page-title')} level='h2'>
                     Новости
                 </Title>
                 <div className={cx('news__page-list')}>
@@ -46,7 +39,8 @@ const NewsContainer = memo(() => {
                         -
                     </div>
                     <ListCardNews
-                        listCardNews={cur === 0 ? [...arr].slice(0, 3) : arr.filter((_, i) => i >= cur).slice(0, 3)}
+                        listCardNews={arr.slice(cur, cur + 3)}
+                        // listCardNews={cur === 0 ? [...arr].slice(0, 3) : arr.filter((_, i) => i >= cur).slice(0, 3)}
                     />
                     <div onClick={() => handleIsNext()} className={cx('news__page-btn')}>
                         +

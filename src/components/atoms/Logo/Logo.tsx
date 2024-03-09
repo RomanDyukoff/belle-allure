@@ -9,7 +9,7 @@ const cx = cnBind.bind(styles);
 export const Logo = ({ className, title = 'Belle Allure' }: { className?: string; title?: string }) => {
     return (
         <Link className={cx('link-logo', className)} href='/'>
-            <Title classNames={cx('logo')} levet='h1'>
+            <Title classNames={cx('logo')} level='h1'>
                 {title}
             </Title>
         </Link>

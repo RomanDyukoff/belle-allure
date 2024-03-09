@@ -36,7 +36,7 @@ const PriceInfoContainer = memo(() => {
     return (
         <div className={cx('price')}>
             <AdaptiveContainer classNames={cx('price__container')}>
-                <Title classNames={cx('price__caption')} levet='h2'>
+                <Title classNames={cx('price__caption')} level='h2'>
                     Позвольте нам побаловать вас
                 </Title>
                 <div className={cx('price__items')}>

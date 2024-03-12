@@ -1,3 +1,5 @@
+'use client';
+
 import { useCn } from '@/hooks/useCn';
 
 import { Title } from '../TItle/Title';
@@ -6,7 +8,7 @@ import type { LearnCardType } from './LearnCard.type';
 
 import styles from './style.module.scss';
 
-export const LearnCard = ({ title, text, price, duration }: LearnCardType) => {
+export const LearnCard = ({ title, text, price, duration, socials }: LearnCardType) => {
     const cx = useCn(styles);
 
     return (
@@ -19,6 +21,15 @@ export const LearnCard = ({ title, text, price, duration }: LearnCardType) => {
                 <span>Стоимость: {price} руб.</span>
                 <span>Длительность: {duration} день</span>
             </div>
+            {socials && (
+                <div className={cx('learn-card__socials')}>
+                    {socials.map(({ social, link }, i) => (
+                        <a key={i} href={link}>
+                            Подробнее в {social}
+                        </a>
+                    ))}
+                </div>
+            )}
         </article>
     );
 };

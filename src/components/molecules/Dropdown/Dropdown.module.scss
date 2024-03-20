@@ -17,8 +17,8 @@
     }
 }
 .menu-point {
-    font-size: 16px;
-    font-weight: 300;
+    @include text-Subtitle2();
+    color: #cb7098;
     position: relative;
     transition: 0.4s;
     cursor: pointer;
@@ -34,7 +34,7 @@
 }
 
 .t-menusub__arrow::after {
-    content: "";
+    content: '';
     width: 0;
     height: 0;
     border-style: solid;

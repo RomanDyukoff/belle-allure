@@ -3,11 +3,12 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev --turbo",
+        "dev": "next dev ",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "lint:fix": "next lint --fix"
+        "_lint": "next lint",
+        "lint": "eslint \"src/**/*.+(js|jsx|ts|tsx|json)\"",
+        "lint-fix": "eslint --fix \"src/**/*.+(js|jsx|ts|tsx|json)\""
     },
     "dependencies": {
         "@emotion/react": "^11.11.3",
@@ -15,6 +16,7 @@
         "@mui/icons-material": "^5.15.10",
         "@mui/material": "^5.15.9",
         "@types/nodemailer": "^6.4.14",
+        "@types/swiper": "^6.0.0",
         "classnames": "^2.3.2",
         "eslint-plugin-simple-import-sort": "^10.0.0",
         "eslint-plugin-standard": "^5.0.0",
@@ -26,9 +28,11 @@
         "react": "^18",
         "react-dom": "^18",
         "sass": "^1.62.1",
-        "standard": "^17.1.0"
+        "standard": "^17.1.0",
+        "swiper": "^11.0.7"
     },
     "devDependencies": {
+        "@svgr/webpack": "^8.1.0",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
@@ -47,6 +51,7 @@
         "eslint-plugin-standard": "^5.0.0",
         "eslint-plugin-unused-imports": "^2.0.0",
         "prettier": "^2.8.4",
-        "typescript": "^5.2.0"
+        "typescript": "^5.2.0",
+        "url-loader": "^4.1.1"
     }
 }

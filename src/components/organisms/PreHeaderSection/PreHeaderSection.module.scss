@@ -1,0 +1,21 @@
+.pre-header {
+    height: 250px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+
+            .logo-title {
+                font-size: 84px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+        }
+    }
+}

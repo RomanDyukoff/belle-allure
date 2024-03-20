@@ -6,7 +6,7 @@ export const useModalWindow = () => {
     const { value, setFalse, toggleValue } = useBooleanState(false);
     const isRef = useRef<HTMLDivElement | null>(null);
     const handleClickOutside = (e: MouseEvent) => {
-        if (isRef.current && !isRef.current.contains(e.target as HTMLDivElement)) {
+        if (isRef.current && !isRef.current.contains(e.target as Node) && isRef.current.contains(e.target as Node)) {
             setFalse();
         }
     };

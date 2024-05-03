@@ -1,11 +1,9 @@
 import type { IROUTES, IROUTESFOOTER } from '@/types';
 
 export const ROUTES: IROUTES[] = [
-    { title: 'О нас', href: '#' },
-    { title: 'Услуги', href: '#' },
-    { title: 'Блог', href: '#' },
-    { title: 'on Board', href: '#' },
-    { title: 'Акции', href: '#' },
+    { title: 'Салон', href: '#' },
+    { title: 'Обучение', href: '#' },
+    { title: 'Вакансии', href: '#' },
     { title: 'Контакты', href: '/#contacts' },
 ];
 

@@ -47,9 +47,8 @@ const MastersContainer = memo(() => {
         setImageIndex(dataImage.findIndex((image) => +image.id === +id));
     };
 
-    const handleMouseLeave = () => {
-        setIsHovering(false);
-    };
+    const handleMouseLeave = () => setIsHovering(false);
+
 
     useEffect(() => {
         let interval: NodeJS.Timeout;

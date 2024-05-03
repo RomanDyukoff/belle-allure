@@ -1,5 +1,3 @@
-'use client';
-
 import cnBind from 'classnames/bind';
 import Link from 'next/link';
 

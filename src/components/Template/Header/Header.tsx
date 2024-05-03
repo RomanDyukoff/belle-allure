@@ -1,26 +1,24 @@
-'use client';
-
-import { Button } from '@mui/material';
 import cnBind from 'classnames/bind';
 
+import { Logo } from '@/components/atoms/Logo/Logo';
+import { NavBar } from '@/components/molecules/NavBar/NavBar';
 import { useScrollTop } from '@/hooks/useScrollTop';
 
 import styles from './Header.module.scss';
 
 const cx = cnBind.bind(styles);
 
-export const Header = () => {
+export const Header = ({ className }: { className?: string }) => {
     const [, , v] = useScrollTop();
 
     return (
-        <header className={cx('header', v >= 50 && 'scroll-active')}>
-            <div className={cx('header-container')}>
-                <div className={cx('header-contacts')}>
-                    <a className={cx('header-phone')} href='tel:+73467300050' target='_blank' rel='noreferrer'>
-                        +7(346)730-00-50
-                    </a>
-                    <Button className={cx('header-btn')}>Запись в салон</Button>
+        <header className={cx('header', className, v >= 50 && 'scroll-active')}>
+            <div className={cx('header-container', 'container')}>
+                <div className={cx('header-logo')}>
+                    <Logo />
+                    <span className={cx('title')}>салон ногтевого сервиса</span>
                 </div>
+                <NavBar />
             </div>
         </header>
     );

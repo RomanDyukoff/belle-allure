@@ -1,7 +1,6 @@
 'use client';
 
 import { memo, useEffect, useState } from 'react';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
@@ -78,7 +77,7 @@ const MastersContainer = memo(() => {
                                 onMouseLeave={handleMouseLeave}
                             >
                                 <span>{name}</span>
-                                <ArrowForwardIcon className={cx('arrow')} />
+                                {/* <ArrowForwardIcon className={cx('arrow')} /> */}
                             </li>
                         ))}
                     </ul>

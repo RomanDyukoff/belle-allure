@@ -1,19 +1,19 @@
-
 @mixin font-ALLSCRONE {
-    font-family: "Allegretto Script One", sans-serif;
+    font-family: 'Allegretto Script One', sans-serif;
 }
 @mixin font-RR {
-    font-family: "RewlineRegular", sans-serif;
+    font-family: 'RewlineRegular', sans-serif;
 }
 @mixin font-RB {
-    font-family: "RewlineBold", sans-serif;
+    font-family: 'RewlineBold', sans-serif;
 }
 @mixin font-RRB {
-    font-family: "RewlineRegularBold", sans-serif;
+    font-family: 'RewlineRegularBold', sans-serif;
 }
 @mixin font-RSM {
-    font-family: "RewlineSimeBold", sans-serif;
+    font-family: 'RewlineSimeBold', sans-serif;
 }
+
 @mixin text-Display1 {
     @include font-ALLSCRONE();
     font-weight: 600;
@@ -40,14 +40,12 @@
     line-height: 48px;
 }
 @mixin text-Headline3 {
-
     @include font-RB();
     font-weight: 700;
     font-size: 34px;
     line-height: 40px;
 }
 @mixin text-Headline4 {
-
     @include font-RSM();
     font-weight: 600;
     font-size: 32px;

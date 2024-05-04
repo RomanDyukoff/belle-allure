@@ -25,7 +25,7 @@ export const PageLayout = ({ children, title }: PropsType) => {
 
             <div className={cx('wrapper')}>
                 <Header />
-                <main style={{ overflow: 'hidden' }} className={cx('main')}>
+                <main className={cx('main')}>
                     {children}
                 </main>
                 <Footer />

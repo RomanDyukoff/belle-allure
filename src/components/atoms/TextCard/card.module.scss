@@ -1,0 +1,40 @@
+.text-card {
+    background-color: $color-primary;
+    border-radius: $radius-18;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px 37px 37px 37px;
+    }
+
+    &__point {
+        font-family: $f-family-Allegretto;
+        font-weight: $font-weight-400;
+        font-size: 56px;
+        line-height: 65.24px;
+        margin-bottom: 40px;
+        color: #ffffff4d;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-family: $f-family-Merriweather;
+        font-weight: $font-weight-400;
+        font-size: 30px;
+        line-height: 45.01px;
+        letter-spacing: 2%;
+        color: $color-light;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: $f-family-Merriweather;
+        font-weight: $font-weight-400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff4d;
+    }
+}

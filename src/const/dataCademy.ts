@@ -116,7 +116,7 @@ import bg from '@/assets/images/welcome.jpg';
 const dataWelcopeMainPage: WelcomeSectionType = {
     image: bg.src,
     title: 'Маникюр',
-    description: 'это не косметическая процедура,это способ улучшить настроение и повысить самооценку',
+    description: 'это не косметическая процедура,это способ улучшить настроение и повысить самооценку',
     btnName: 'Записаться',
 };
 

@@ -3,6 +3,7 @@ import { PageLayout } from '@/layouts/PageLayout/PageLayout';
 
 import { dataWelcopeMainPage } from '@/const/dataCademy';
 import { AdvantagesSection } from '@/components/organisms/AdvantagesSection/AdvantagesSection';
+import { LayotServices } from '@/components/organisms/LayoutServices/LayotServices';
 
 
 
@@ -11,6 +12,7 @@ const Index = () => {
         <PageLayout title='index'>
             <WelcomeSection {...dataWelcopeMainPage} />
             <AdvantagesSection />
+            <LayotServices />
         </PageLayout>
     )
 };

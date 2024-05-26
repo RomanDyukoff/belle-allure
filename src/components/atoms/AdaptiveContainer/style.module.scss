@@ -6,15 +6,28 @@ $breakpoints: (
 );
 
 .container {
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     height: 100%;
 
-    @each $breakpoint, $size in $breakpoints {
-        @media (max-width: $size) {
-            max-width: $size;
-        }
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1920px;
+    width: 100%;
+
+    @media (max-width: 1920px) and (min-width: 1440px) {
+        padding-left: clamp(100px, calc(100px + (20 * (100vw - 1440px) / 480)), 120px);
+        padding-right: clamp(100px, calc(100px + (20 * (100vw - 1440px) / 480)), 120px);
     }
+
+    @media (max-width: 1439px) and (min-width: 768px) {
+        padding-left: clamp(60px, 7vw, 100px);
+        padding-right: clamp(60px, 7vw, 100px);
+    }
+}
+
+.container-fluid {
+    max-width: 100%;
 }

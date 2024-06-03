@@ -97,7 +97,7 @@
     @include font-RR();
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 138%;
 }
 @mixin text-Body3 {
     @include font-RR();

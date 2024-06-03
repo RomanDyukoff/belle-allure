@@ -2,8 +2,6 @@ import { ServiceSectionProps } from '../ServiceSection/service.type'
 import { ServiceSection } from '../ServiceSection/ServiceSection'
 
 
-
-
 const data: ServiceSectionProps[] = [
 	{
 		image: '/image/service1.png',
@@ -40,8 +38,8 @@ const data: ServiceSectionProps[] = [
 
 export const LayotServices = () => {
 	return (
-		data.map(d => (
-			<ServiceSection {...d} />
+		data.map((d, i) => (
+			<ServiceSection key={i} {...d} />
 		))
 
 	)

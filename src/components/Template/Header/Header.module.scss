@@ -8,11 +8,12 @@
     right: 0;
     background-color: rgba(235, 227, 230, 1);
     z-index: 3;
+    padding: 26px 0;
+
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 76px;
         gap: 2.2rem;
     }
 
@@ -24,6 +25,7 @@
         & .title {
             @include text-Body2;
             color: rgba(96, 100, 115, 1);
+            line-height: 138%;
         }
     }
 }

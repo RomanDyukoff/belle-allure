@@ -16,19 +16,35 @@
         margin-bottom: 100px;
     }
 
-    & .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-        grid-template-rows: auto;
-        justify-content: space-between;
-        gap: 8px;
+    .card-void {
+        background: none;
     }
 
+    & .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    & .fadeIn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    & .fadeOut {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    & .card-void,
+    & .card,
     & .card-image {
         width: 100%;
         height: 320px;
         border-radius: $radius-18;
         overflow: hidden;
+        transition: opacity 0.5s, transform 0.5s;
 
         & > img {
             width: 100%;
@@ -45,5 +61,77 @@
         font-weight: $font-weight-400;
         line-height: 65.24px;
         color: $color-primary;
+    }
+
+    // Media queries for responsive design
+
+    @media (max-width: 1440px) {
+        &__title {
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 80px;
+        }
+
+        &__wrapper {
+            padding: 120px 0;
+        }
+
+        & .cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            font-size: 32px;
+            line-height: 48px;
+            margin-bottom: 60px;
+        }
+
+        &__wrapper {
+            padding: 80px 0;
+        }
+
+        & .cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 20px;
+        }
+
+        & .card-void,
+        & .card,
+        & .card-image {
+            height: 280px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__title {
+            font-size: 28px;
+            line-height: 42px;
+            margin-bottom: 40px;
+        }
+
+        &__wrapper {
+            padding: 60px 0;
+        }
+
+        & .cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        & .card-void,
+        & .card,
+        & .card-image {
+            height: 220px;
+        }
+
+        & .first-latter {
+            font-size: 40px;
+            line-height: 50px;
+        }
     }
 }

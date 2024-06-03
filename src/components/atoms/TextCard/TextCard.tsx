@@ -8,12 +8,13 @@ type TextCardType = {
 	point: string;
 	title: string;
 	text: string;
+	className?: string;
 }
 
-export const TextCard = ({ point, title, text }: TextCardType) => {
+export const TextCard = ({ point, title, text, className }: TextCardType) => {
 	const cx = useCn(styles)
 	return (
-		<div className={cx('text-card')}>
+		<div className={cx('text-card', className)}>
 			<div className={cx('text-card__wrapper')}>
 				<span className={cx('text-card__point')}>{point}</span>
 				<Title classNames={cx('text-card__title')} level='h4'>

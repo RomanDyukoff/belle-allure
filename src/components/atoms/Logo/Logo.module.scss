@@ -1,12 +1,12 @@
 .link-logo {
-  text-decoration: none;
+    text-decoration: none;
 
-  .logo {
-    font: 40px "Allegretto Script One";
-    color: rgba(87, 4, 37, 1);
-    letter-spacing: -1px;
-  }
+    .logo {
+        font-family: $f-family-Allegretto;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 100%;
+        color: rgba(87, 4, 37, 1);
+        letter-spacing: -1px;
+    }
 }
-
-
-
